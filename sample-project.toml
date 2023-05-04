@@ -1,0 +1,14 @@
+[[buildpacks]]
+id = "paketo-buildpacks/node"
+version = "0.1.13"
+
+[[buildpacks]]
+id = "paketo-buildpacks/nginx"
+version = "0.4.2"
+
+[metadata]
+  # Add any metadata you want to include in the app image metadata
+  # For example:
+  name = "momoh"
+  description = "A simple Hello Project"
+
