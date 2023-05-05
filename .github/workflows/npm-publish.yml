@@ -16,9 +16,9 @@ jobs:
         uses: docker/setup-buildx-action@v1
       - name: Install Pack CLI
         run: |
-          add-apt-repository ppa:cncf-buildpacks/pack-cli
-          apt-get update
-          apt-get install pack-cli
+          sudo add-apt-repository ppa:cncf-buildpacks/pack-cli
+          sudo apt-get update
+          sudo apt-get install pack-cli
       - name: Build app with Buildpacks.io and paketo-buildpacks
         run: pack build ohiani/test:latest --builder paketobuildpacks/builder:base --buildpacks paketobuildpacks/nodejs --buildpacks paketobuildpacks/nginx --path .
       - name: Log in to Docker registry
