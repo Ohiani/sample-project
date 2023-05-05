@@ -31,4 +31,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: ohiani/test
+          tags: ohiani/momoh-test
