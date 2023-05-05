@@ -29,8 +29,5 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
       - name: Push Docker image to registry
-        uses: docker/build-push-action@v4
-        with:
-          context: .
-          push: true
-          tags: ohiani/momoh-test:latest
+        run: docker push ${{ secrets.DOCKER_USERNAME }}/momoh-test
+        
