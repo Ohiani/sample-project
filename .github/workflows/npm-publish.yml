@@ -20,7 +20,7 @@ jobs:
           sudo apt-get update
           sudo apt-get install pack-cli
       - name: Build app with Buildpacks.io and paketo-buildpacks
-        run: pack build ohiani/test:latest --builder paketobuildpacks/builder:base --buildpacks paketobuildpacks/nodejs --buildpacks paketobuildpacks/nginx --path .
+        run:  sudo pack build momoh-test --builder paketobuildpacks/builder:full
       - name: Log in to Docker registry
         uses: docker/login-action@v1
         with:
